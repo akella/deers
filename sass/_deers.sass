@@ -1,0 +1,135 @@
+.deers
+	border-top: 1px solid #B5CCDD 
+	position: relative
+	z-index: 20 
+	.deers__line
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 760px
+		border-left: 1px dashed #D6ACB5 
+		&:before,&:after
+			content: ' '
+			position: absolute
+			left: -6px 
+		&:before
+			+s(top)
+			top: -8px 
+		&:after
+			+s(bottom)
+			bottom: -10px 
+	.deers__finish
+		position: absolute
+		top: 0
+		bottom: 0  
+		right: 120px 
+		width: 60px 
+		+box-sizing(border-box)
+		border-left: 2px solid #76A9CC 
+		background: rgba(#1E71AD, .1) 
+		i
+			position: absolute
+			left: 0px
+			top: 0
+			bottom: 0
+			width: 18px    
+			background: url("../img/finishthing.png") repeat 0 0
+		b
+			+s(finish)
+			position: absolute
+			right: 10px 
+			top: 50%
+			margin-top: -45px
+		.deers__finishflag1
+			position: absolute
+			top: -58px 
+			left: 0 
+			+s(flag1)
+		.deers__finishflag2
+			position: absolute
+			bottom: 0px 
+			+s(flag2)
+.line
+	height: 79px 
+	border-bottom: 1px solid #B5CCDD 
+	background: url(../img/line.png) repeat 0 0 
+	position: relative
+	.line__progress
+		position: absolute
+		left: 0 
+		height: 80px 
+	.line__fill
+		position: absolute
+		left: 0
+		right: 0
+		height: 80px   
+		top: 0 
+		background: rgba(#1E71AD, .03)
+		&:nth-child(odd)
+			.line__fill
+				background: rgba(#1E71AD, .1)  	
+	.line__steps
+		height: 12px 
+		position: absolute
+		bottom: 13px
+		left: 0
+		right: 0
+		background: url(../img/steps.png) repeat-x 0 0    
+	.line__text
+		position: absolute
+		right: 0
+		width: 73px  
+		text-align: left
+		color: #000
+		opacity: .5
+		padding-top: 28px  
+		font-size: 11px 
+		span
+			display: block
+	.line__bet
+		position: absolute
+		+s(bet)
+		right: 30px 
+		top: -24px 
+	
+	.line__cancel
+		position: absolute
+		right: 0
+		top: 8px  
+		+s(cancel)
+		cursor: pointer
+		opacity: 0 
+		+transition(all .3s linear)
+	&:hover .line__cancel
+		opacity: 1 
+	.line__stop
+		position: absolute
+		right: 0
+		width: 120px  
+		background: url(../img/lines.png) repeat 0 0
+		height: 80px  
+	.line__number
+		position: absolute
+		top: 32px 
+		width: 18px 
+		height: 16px 
+		line-height: 16px
+		color: #fff  
+		text-align: center
+		right: -9px 
+		z-index: 3
+		background: rgba(#B165B1, .5)  
+		font-size: 10px 
+		font-weight: bold
+	.line__deer
+		right: -29px 
+		bottom: 12px 
+		position: absolute
+		+s(deer)
+		z-index: 2 	
+	&.line_lead
+		.line__fill
+			background: rgba(#1E71AD, .3)
+		.line__text
+			color: #194D87  
+			opacity: 1 
